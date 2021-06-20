@@ -10,6 +10,7 @@
         public static $emailTaken = "Your Email is already taken. Please choose another.";
         public static $passwordsDontMatch = "Your passwords don't match!";
         public static $passwordLength = "Your password must be between 5 and 25 characters!";
+        public static $loginFailed = "Your username or password was incorrect.";
     }
     
 
