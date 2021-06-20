@@ -47,7 +47,9 @@
             </div>
             <form action="" method="POST">
 
-                <?php echo $account->getError("First name wrong lenth"); ?>
+                <?php echo $account->getError(Constants::$firstNameCharacters); ?>
+
+
                 <input type="text" name="firstName" placeholder="First Name" required>
                 <input type="text" name="lastName" placeholder="Last Name" required>
                 <input type="text" name="username" placeholder="Username" required>

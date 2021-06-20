@@ -13,7 +13,7 @@
         //Checks length of first name is more than 25 chars long.
         public function validateFirstName($fn) {
             if(strlen($fn) < 2 || strlen($fn) > 25) {
-                array_push($this->errorArray, "First name wrong lenth");
+                array_push($this->errorArray, Constants::$firstNameCharacters);
             }
 
         }
