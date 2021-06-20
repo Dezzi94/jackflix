@@ -15,6 +15,9 @@
         $password = FormSanitizer::sanitizeFormPassword($_POST["password"]);
         $password2 = FormSanitizer::sanitizeFormPassword($_POST["password2"]);
 
+        //Makes the call to check the first name length is run through the function validateFirstName. 
+        $account->validateFirstName($firstName);
+
 /*      echo $firstName . "<br>";
         echo $lastName . "<br>";
         echo $username . "<br>";
@@ -42,6 +45,8 @@
                 <span>to continue to Jackflix</span>
             </div>
             <form action="" method="POST">
+
+                <?php echo $account->getError("First name wrong lenth"); ?>
                 <input type="text" name="firstName" placeholder="First Name" required>
                 <input type="text" name="lastName" placeholder="Last Name" required>
                 <input type="text" name="username" placeholder="Username" required>
